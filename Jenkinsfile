@@ -7,6 +7,9 @@ pipeline {
             steps {
 		 println 'inside function'
                 git branch: 'branch', credentialsId: 'srsave', url: 'https://github.com/srsave/TestMerge.git'
+		git checkout main
+		    git merge branch
+		    println 'post merge'
             }
 	}
     }
