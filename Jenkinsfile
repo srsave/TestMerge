@@ -1,8 +1,8 @@
 pipeline {
     agent any
-	println 'node'
+	
     stages {
-	    println 'start'
+	
         stage('push Code from branch to dev') {
             steps {
 		 println 'inside function'
