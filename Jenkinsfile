@@ -7,5 +7,5 @@ pipeline {
                 git branch: 'branch', credentialsId: 'srsave', url: 'https://github.com/srsave/TestMerge.git'
             }
 	}
-	
+    }
 }
