@@ -16,7 +16,7 @@ pipeline {
 		    println 'insideupdate'
                 git add -A
                 git reset --hard HEAD
-                git merge TestMerge/branch
+                git merge 'TestMerge/branch'
                 git commit -m "Merged develop branch to master"
                 git push TestMerge branch
             }
