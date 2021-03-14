@@ -7,7 +7,7 @@ pipeline {
             steps {
 		 println 'inside function'
 		    
-                git branch: 'branch', credentialsId: 'srsave', url: 'https://github.com/srsave/TestMerge.git'
+               	     git branch: 'branch', credentialsId: 'srsave', url: 'https://github.com/srsave/TestMerge.git'
 		     println 'Branch Success'
             }
 	}
@@ -17,7 +17,7 @@ pipeline {
                 sh 'git reset --hard HEAD'
                 sh 'git merge TestMerge/branch'
                 sh 'git commit -m "Merged develop branch to master"'
-                sh "git push TestMerge branch"
+                sh 'git push TestMerge branch'
             }
    	 }
     }
