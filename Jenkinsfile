@@ -17,7 +17,7 @@ pipeline {
                 sh 'git reset --hard HEAD'
                 sh 'git merge TestMerge/branch'
                 sh 'git commit -m "Merged develop branch to master"'
-                sh "git push TestMerge main"
+                sh "git push TestMerge branch"
             }
    	 }
     }
