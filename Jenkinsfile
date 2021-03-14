@@ -11,6 +11,15 @@ pipeline {
 		     println 'Branch Success'
             }
 	}
-	
+	stage('update master'){
+            steps{
+		    println 'insideupdate'
+                git add: '-A'
+                git reset: '--hard HEAD'
+                git merge: 'TestMerge/branch'
+                git commit: '-m "Merged develop branch to master"'
+                git push: 'TestMerge branch'
+            }
+   	 }
     }
 }
