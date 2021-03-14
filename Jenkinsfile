@@ -13,11 +13,12 @@ pipeline {
 	}
 	stage('update master'){
             steps{
-                sh 'git add -A'
-                sh 'git reset --hard HEAD'
-                sh 'git merge TestMerge/branch'
-                sh 'git commit -m "Merged develop branch to master"'
-                sh 'git push TestMerge branch'
+		    println 'insideupdate'
+                git add -A
+                git reset --hard HEAD
+                git merge TestMerge/branch
+                git commit -m "Merged develop branch to master"
+                git push TestMerge branch
             }
    	 }
     }
