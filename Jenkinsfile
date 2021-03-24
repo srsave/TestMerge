@@ -5,6 +5,9 @@ pipeline {
             steps {
 				deleteDir()
                 git branch: 'branch1', credentialsId: 'hp', url: 'https://github.com/Hiramangp/AspwithNunitDemo.git'
+		    println 'Success merge 123'
+		    
+		    
             }
 		}
 		stage('Compile the code') {
